@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert Safari | Certified Tourism</title>
+    <meta name="description"
+        content="Discover the best desert safari experiences in Dubai, from luxury evening retreats to thrilling morning adventures.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .category-header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .category-header .subtitle {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .category-header h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .breadcrumbs {
+            display: flex;
+            gap: 10px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--color-accent);
+            opacity: 1;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .tour-card {
+            background: rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .tour-img-wrapper {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .tour-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .tour-card:hover .tour-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .category-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tour-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tour-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tour-header h3 {
+            font-size: 1.05rem;
+            line-height: 1.4;
+            color: #fff;
+            flex: 1;
+            font-weight: 500;
+        }
+
+        .tour-price {
+            text-align: right;
+        }
+
+        .tour-price .from {
+            display: inline-block;
+            font-size: 0.75rem;
+            opacity: 0.6;
+            text-transform: uppercase;
+            margin-right: 5px;
+        }
+
+        .tour-price .amount {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #3d2e1e;
+        }
+
+        .tour-meta {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-category-title {
+            grid-column: 1 / -1;
+            font-size: 1.8rem;
+            color: #fff;
+            margin: 60px 0 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-family: var(--font-heading);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .sub-category-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .sub-category-title:first-child {
+            margin-top: 0;
+        }
+
+        @media (max-width: 1100px) {
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .category-header h1 {
+                font-size: 3rem;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sub-category-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: transparent;">
+
+    <!-- Static Global Background -->
+    <div class="global-bg">
+        <img src="assets/desert_background.png" alt="Dubai Desert Background">
+        <div class="global-overlay"></div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="logo">CERTIFIED TOURISM</div>
+        <div class="nav-toggle" id="nav-toggle"
+            onclick="document.getElementById('nav-menu').classList.toggle('show-menu')">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-container" id="nav-menu">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="desert-safari.html">Desert Safari</a>
+                <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
+                <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+            <a href="contact.html" class="nav-cta cta-primary">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Category Header -->
+    <header class="category-header">
+        <span class="subtitle">Exquisite Adventures</span>
+        <h1>Desert Safari</h1>
+        <p style="font-size: 1.2rem; font-weight: 300; max-width: 700px; margin: 0 auto; opacity: 0.9;">From
+            heart-pounding dune bashing to serene starlit dinners, experience the true essence of the Arabian Desert.
+        </p>
+    </header>
+
+    <!-- Main Content -->
+    <section class="section-padding"
+        style="background-color: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border-radius: 40px; width: 96%; max-width: 1400px; margin: 0 auto 100px; padding: 80px 5%;">
+        <div class="category-grid">
+
+            <!-- Section 1: The Bedouin Experience -->
+            <h2 class="sub-category-title gs-reveal">The Bedouin Experience</h2>
+
+            <!-- Tour 1 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1541434316656-784860b777a8?auto=format&fit=crop&q=80&w=800"
+                        alt="Imperial Desert Journey">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Imperial Desert Journey: Ultimate Package</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$695</span>
+                        </div>
+                        <a href="imperial-desert-journey.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 10 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&q=80&w=800"
+                        alt="Grand Desert Adventure">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Grand Desert Adventure: Complete Experience</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$575</span>
+                        </div>
+                        <a href="grand-desert-adventure.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 3 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="https://certifiedadventure.com/wp-content/uploads/2024/07/Dubai-Desert-Group-6-Certified-Adventure-Tourism.jpg"
+                        alt="Crimson Dune Indulgence">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Crimson Dune Indulgence: BBQ & Entertainment</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$295</span>
+                        </div>
+                        <a href="crimson-dune-indulgence.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 11 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?auto=format&fit=crop&q=80&w=800"
+                        alt="Red Dune Adventure">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Red Dune Adventure: BBQ & Fun</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$65</span>
+                        </div>
+                        <a href="red-dune-adventure.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: The Canopy Village -->
+            <h2 class="sub-category-title gs-reveal">The Canopy Village</h2>
+
+            <!-- Tour 2 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="https://certifiedadventure.com/wp-content/uploads/2024/08/Dubai-Fire-Show-Certified-Adventure-Tourism-7-900x500.jpg"
+                        alt="Opulent Desert Retreat">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Opulent Desert Retreat: All-Inclusive Luxury</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$100</span>
+                        </div>
+                        <a href="opulent-desert-retreat.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 4 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="https://certifiedadventure.com/wp-content/uploads/2024/08/Dubai-Fire-Show-Certified-Adventure-Tourism-5.jpg"
+                        alt="Starlight Serenade">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Starlight Serenade: Gourmet Dinner & Entertainment</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$85</span>
+                        </div>
+                        <a href="starlight-serenade.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 5 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="assets/fossil-rock-4.jpg" alt="Fossil Rock Palace">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Fossil Rock Palace: Gourmet Dinner & Entertainment</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$475</span>
+                        </div>
+                        <a href="fossil-rock-palace.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 12 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1627940183181-e23a4835a6db?auto=format&fit=crop&q=80&w=800"
+                        alt="Ultimate Private Desert Escape">
+                    <span class="category-badge">Private</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Ultimate Private Desert Escape: All-Inclusive Adventure</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$85</span>
+                        </div>
+                        <a href="ultimate-private-desert-escape.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 7 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1528256336495-2acbb547bf14?auto=format&fit=crop&q=80&w=800"
+                        alt="Fossil Rock Oasis">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Fossil Rock Oasis: BBQ Feast & Entertainment</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$395</span>
+                        </div>
+                        <a href="fossil-rock-oasis.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Morning & Sunrise -->
+            <h2 id="morning-sunrise" class="sub-category-title gs-reveal">Morning & Sunrise</h2>
+
+            <!-- Tour 6 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="assets/golden-hour-1.jpg" alt="Golden Hour Desert Adventure">
+                    <span class="category-badge">Sunrise</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Golden Hour Desert Adventure</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$245</span>
+                        </div>
+                        <a href="golden-hour-desert-adventure.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 8 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="assets/exclusive-morning-1.jpg" alt="Exclusive Morning Desert Escape">
+                    <span class="category-badge">Morning</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Exclusive Morning Desert Escape</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$745</span>
+                        </div>
+                        <a href="exclusive-morning-desert-escape.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour 9 -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="assets/thrilling-morning-1.jpg" alt="Thrilling Morning Dune Bashing">
+                    <span class="category-badge">Morning</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Thrilling Morning Dune Bashing Adventure</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$195</span>
+                        </div>
+                        <a href="thrilling-morning-dune-bashing.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: ATV & Dune Buggy -->
+            <h2 id="atv-dune-buggy" class="sub-category-title gs-reveal">ATV & Dune Buggy</h2>
+
+            <!-- Tour: Night Rider Luxury Quad Bike Tour -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="assets/night-rider-1.jpg" alt="Night Rider Luxury Quad Bike Tour">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Night Rider Luxury Quad Bike Tour</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$115</span>
+                        </div>
+                        <a href="night-rider-luxury-quad-bike.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour: Golden Hour Dune Buggy Extravaganza -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="assets/golden-buggy-1.jpg" alt="Golden Hour Dune Buggy Extravaganza">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Golden Hour Dune Buggy Extravaganza</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$225</span>
+                        </div>
+                        <a href="golden-hour-dune-buggy.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour: Sunset Dune Buggy Adventure -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="assets/sunset-buggy-1.jpg" alt="Sunset Dune Buggy Adventure">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Sunset Dune Buggy Adventure</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$195</span>
+                        </div>
+                        <a href="sunset-dune-buggy-adventure.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour: Desert Night Quad Bike Experience -->
+            <div class="tour-card gs-reveal">
+                <div class="tour-img-wrapper">
+                    <img src="assets/night-quad-1.jpg" alt="Desert Night Quad Bike Experience">
+                    <span class="category-badge">Evening</span>
+                </div>
+                <div class="tour-content">
+                    <div class="tour-header">
+                        <h3>Desert Night Quad Bike Experience</h3>
+                    </div>
+                    <div class="tour-meta">
+                        <div class="tour-price">
+                            <span class="amount">$95</span>
+                        </div>
+                        <a href="desert-night-quad-bike.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">CERTIFIED TOURISM</div>
+                <p>Curating extraordinary travel experiences in Dubai with unmatched elegance and service.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Quick Links</h4>
+                    <a href="desert-safari.html">Desert Safari</a>
+                    <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
+                    <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                    <a href="gallery.html">Gallery</a>
+                </div>
+                <div class="link-group">
+                    <h4>Contact Us</h4>
+                    <a href="tel:+97143795773"><i class="fa-solid fa-phone"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 4379 5773</a>
+                    <a href="https://wa.me/971559744777"><i class="fa-brands fa-whatsapp"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 55 974 4777</a>
+                    <a href="mailto:hello@certifiedtourism.com"><i class="fa-solid fa-envelope"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>hello@certifiedtourism.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Certified Tourism. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai City Tour: Half-Day Adventure | Burj Khalifa, Palm Jumeirah & Souks</title>
+    <meta name="description"
+        content="Discover the magic of Dubai on this half-day city tour. Visit Burj Khalifa, Palm Jumeirah, the Gold and Spice Souks, and experience a traditional Abra ride.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-styles.css">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body style="background-color: transparent;">
+    <!-- Global Background -->
+    <div class="global-bg">
+        <img src="assets/desert_background.png" alt="Dubai City Background">
+        <div class="global-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">CERTIFIED TOURISM</div>
+        <div class="nav-toggle" id="nav-toggle"
+            onclick="document.getElementById('nav-menu').classList.toggle('show-menu')">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-container" id="nav-menu">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="desert-safari.html">Desert Safari</a>
+                <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+            <a href="contact.html" class="nav-cta cta-primary">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Tour Header -->
+    <header class="tour-header-section">
+        <div class="tour-title-wrap">
+            <span class="subtitle gs-reveal">Dubai City Tour</span>
+            <h1 class="gs-reveal">Dubai City Tour: Burj Khalifa, Palm Jumeirah, Souks & More</h1>
+            <div class="tour-meta gs-reveal">
+                <span class="meta-item"><i class="fa-solid fa-clock"></i> Half-Day Adventure</span>
+                <span class="meta-item"><i class="fa-solid fa-location-dot"></i> Dubai, UAE</span>
+                <span class="meta-item"><i class="fa-solid fa-user-group"></i> Private Group</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Image Gallery -->
+    <div class="tour-gallery gs-reveal">
+        <div class="gallery-item item-main">
+            <img src="assets/citytourhome.jpg" alt="Dubai City Tour Iconic Landmarks">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/dubai_skyline.png" alt="Dubai Skyline Panorama">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/museum_of_the_future.png" alt="Museum of the Future">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/red-dune-1.jpg" alt="Dubai Experience">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/exclusive-morning-1.jpg" alt="Historic Dubai Creek">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="tour-main-content">
+        <div class="tour-details-column">
+
+            <!-- Experience Overview -->
+            <section id="details" class="content-card gs-reveal">
+                <h2><i class="fa-solid fa-circle-info" style="color: #3d2b1a;"></i> Experience Overview</h2>
+                <p class="detail-text">
+                    We ensure client satisfaction as we have handpicked professionals who have vast knowledge of the history and culture of the destination and lot of information to offer to the clients.
+                </p>
+            </section>
+
+            <!-- Highlights Section -->
+            <section class="content-card gs-reveal">
+                <h3 style="font-size: 1.4rem; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;"><i
+                        class="fa-solid fa-star" style="color: #3d2b1a;"></i> Tour Highlights</h3>
+                <div class="activity-grid">
+                    <div class="activity-item"><i class="fa-solid fa-circle-check"></i> Old Dubai</div>
+                    <div class="activity-item"><i class="fa-solid fa-circle-check"></i> Dubai Creek</div>
+                    <div class="activity-item"><i class="fa-solid fa-circle-check"></i> Gold Souk</div>
+                    <div class="activity-item"><i class="fa-solid fa-circle-check"></i> Spice Souk</div>
+                    <div class="activity-item"><i class="fa-solid fa-circle-check"></i> Dubai Mall</div>
+                    <div class="activity-item"><i class="fa-solid fa-circle-check"></i> Atlantis</div>
+                    <div class="activity-item"><i class="fa-solid fa-circle-check"></i> Burj Khalifa</div>
+                    <div class="activity-item"><i class="fa-solid fa-circle-check"></i> Souvenir shop stop</div>
+                    <div class="activity-item"><i class="fa-solid fa-circle-check"></i> The Sheik Palace</div>
+                    <div class="activity-item"><i class="fa-solid fa-circle-check"></i> Burj Al Arab</div>
+                </div>
+            </section>
+
+            <!-- Inclusions & Exclusions -->
+            <section class="content-card gs-reveal collapsible-section">
+                <div class="section-toggle-header">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-list-check" style="color: #3d2b1a;"></i> Price Includes & Excludes</h3>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="section-body">
+                    <div class="section-body-inner">
+                        <div class="check-list">
+                            <div class="check-column">
+                                <h4 style="margin-bottom: 20px; font-size: 1.2rem; color: #ffffff;">Price Includes</h4>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Pickup and drop-off from your hotel or selected location</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> 4WD air-conditioned vehicle</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Unlimited water</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Entry/Admission - Deira Old Souk Abra Station</div>
+                            </div>
+                            <div class="check-column">
+                                <h4 style="margin-bottom: 20px; font-size: 1.2rem; color: #ffffff;">Price Excludes</h4>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Lunch</div>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Coffee and/or Tea</div>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Breakfast</div>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Any extra services or expenses not mentioned above.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Good to Know Section -->
+            <section class="content-card gs-reveal collapsible-section">
+                <div class="section-toggle-header">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-lightbulb" style="color: #3d2b1a;"></i> Good to Know</h3>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="section-body">
+                    <div class="section-body-inner">
+                        <ul class="detail-list" style="list-style: none; padding: 0; margin: 0 0 25px 0;">
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info" style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> The 4-wheel drive vehicles are equipped with necessary safety features
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info" style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> The tour duration includes pickup and drop-off
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info" style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Any accidents or damages from the activity will be the sole responsibility of the rider and passenger
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info" style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> International travel insurance is recommended as self-driving activities are prone to risk, possibly leading to serious injury
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info" style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Pickup timing may change due to summer heat; advance notification will be sent
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info" style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Wear long clothes and jackets during winter
+                            </li>
+                        </ul>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 25px;">
+                            <div>
+                                <h4 style="color: #4CAF50; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                                    <i class="fa-solid fa-bag-shopping" style="color: #3d2b1a;"></i> What to bring
+                                </h4>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Sunscreen</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Sunglasses</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Sun hat</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Comfortable shoes</div>
+                            </div>
+                            <div>
+                                <h4 style="color: #F44336; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                                    <i class="fa-solid fa-triangle-exclamation" style="color: #3d2b1a;"></i> Not allowed
+                                </h4>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Luggage or large bags</div>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Wheelchair users (Only Shared Bookings)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Itinerary Section -->
+            <section id="itinerary" class="content-card gs-reveal collapsible-section">
+                <div class="section-toggle-header">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-route" style="color: #3d2b1a;"></i> Itinerary</h3>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="section-body">
+                    <div class="section-body-inner">
+                        <div class="itinerary-static-list">
+                            <div class="itinerary-static-item">
+                                <span class="itinerary-static-title" style="color: #3d2b1a; font-size: 0.9rem; margin-bottom: 10px; display: block;">Stop At: Deira Old Souk Abra Station</span>
+                                <span class="itinerary-static-title">Start your Day with some Culture</span>
+                                <p class="itinerary-static-desc">The ideal Tour to discover in short time a maximum of Dubai. Start your day with some culture! First stop is at the Dubai Museum, showcasing an impressive collection of Information and Artifacts about the History and Life in Dubai and the UAE. Our Guide will then take you to the famous Abra Stations at the Creek and take you on a special Ride on these particular boats. Still today habitants of Dubai are using these boats to get from one side of the creek to the other. Once you arrive, you will discover the beauty and smell of the Spice Souk before entering the glittering Gold Souk. Of course you will have some short time to bargain and to buy something if you wish.</p>
+                            </div>
+                            <div class="itinerary-static-item">
+                                <span class="itinerary-static-title">Beach Promenade & Atlantis</span>
+                                <p class="itinerary-static-desc">Then we continue with the Bus to the famous Jumeirah Mosque, cruising down the Jumeirah Beach Road until the Burj Al Arab, where you get the great opportunity of an amazing Souvenir Picture. From there we pass by the Madinat Souk and continue to the famous Palm Jumeirah, the man-made Island Get your cameras ready for snapping the unique and amazing Atlantis Hotel, looking like a Fantasy Building out of a movie.</p>
+                            </div>
+                            <div class="itinerary-static-item">
+                                <span class="itinerary-static-title">Modern Splendor & Downtown</span>
+                                <p class="itinerary-static-desc">After our short stop at the Atlantis we will cruise back to the Sheikh Zayed Road, passing by the famous Mall of the Emirates. You will easily recognize the mall, because of the unique shape of the attached indoor ski slope. Visible from everywhere, we approach now Downtown, home of Burj Khalifa, the highest tower in the world. Attached to Burj Khalifa is the world’s biggest Mall: The Dubai Mall. If you wish, you can hop off the bus and indulge the luxury environment of the Mall and explore for yourself the Dubai Fountain, Dubai Aquarium and the Underwater Zoo. All attractions are at the Dubai Mall. Of course it is also ideal to have lunch in the super-sized food court. As the Mall is connected to the Metro you may be able to continue afterwards your discovery by yourself by Metro.</p>
+                                <span class="itinerary-static-title" style="margin-top: 15px; font-size: 1rem; color: #fff;">Duration: 30 minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Departure and Return -->
+            <section class="content-card gs-reveal collapsible-section">
+                <div class="section-toggle-header">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-location-arrow" style="color: #3d2b1a;"></i> Departure and Return</h3>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="section-body">
+                    <div class="section-body-inner">
+                        <p class="detail-text" style="margin-bottom: 20px;">
+                            <strong style="color: #fff;">Start:</strong> Multiple pickup locations offered.
+                        </p>
+
+                        <h4 style="color: #3d2b1a; margin-bottom: 15px;">Pickup details</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 25px 0;">
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-check" style="color: #4CAF50; margin-top: 5px; flex-shrink: 0;"></i> Kindly reconfirm pick up time 24hrs Prior the date of excursion
+                            </li>
+                        </ul>
+
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+                            <div style="background: rgba(255,255,255,0.04); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.08);">
+                                <h5 style="color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                                    <i class="fa-solid fa-hotel" style="color: #3d2b1a;"></i> Hotel pickup offered
+                                </h5>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                                    During checkout you will be able to select from the list of included hotels.
+                                </p>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.04); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.08);">
+                                <h5 style="color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                                    <i class="fa-solid fa-plane" style="color: #3d2b1a;"></i> Airport pickup offered
+                                </h5>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                                    Dubai Airport, Dubai United Arab Emirates. Select during checkout.
+                                </p>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.04); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.08);">
+                                <h5 style="color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                                    <i class="fa-solid fa-ship" style="color: #3d2b1a;"></i> Port pickup offered
+                                </h5>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                                    Cruise Terminal 2, Port Rashid – Dubai – United Arab Emirates.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="detail-text" style="margin-top: 20px;">
+                            <strong style="color: #fff;">End:</strong> This activity ends back at the meeting point.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Accessibility Section -->
+            <section class="content-card gs-reveal collapsible-section">
+                <div class="section-toggle-header">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-wheelchair-move" style="color: #3d2b1a;"></i> Accessibility</h3>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="section-body">
+                    <div class="section-body-inner">
+                        <div class="activity-grid">
+                            <div class="activity-item"><i class="fa-solid fa-check"></i> Wheelchair accessible</div>
+                            <div class="activity-item"><i class="fa-solid fa-check"></i> Stroller accessible</div>
+                            <div class="activity-item"><i class="fa-solid fa-check"></i> Near public transportation</div>
+                            <div class="activity-item"><i class="fa-solid fa-check"></i> Infant seats available</div>
+                            <div class="activity-item"><i class="fa-solid fa-check"></i> Transportation is wheelchair accessible</div>
+                            <div class="activity-item"><i class="fa-solid fa-check"></i> Surfaces are wheelchair accessible</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Information Section -->
+            <section class="content-card gs-reveal collapsible-section">
+                <div class="section-toggle-header">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-clipboard-list" style="color: #3d2b1a;"></i> Additional information</h3>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="section-body">
+                    <div class="section-body-inner">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info" style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Confirmation will be received at time of booking
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info" style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Most travellers can participate
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info" style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> This experience requires good weather. If it’s cancelled due to poor weather, you’ll be offered a different date or a full refund
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info" style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> This is a private tour/activity. Only your group will participate
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="content-card gs-reveal">
+                <h3 style="font-size: 1.8rem; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;"><i
+                        class="fa-solid fa-circle-question" style="color: #3d2b1a;"></i> Frequently Asked Questions</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <span>Can I get the refund?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>We understand that plans change. You can cancel your reservation up to 48 hours before
+                                your experience for a full refund. Cancellations made within 24 hours of your experience
+                                will be subject to a 50% cancellation fee.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <span>Can I change the travel date?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>Our booking policy allows for modifications up to 48 hours before your scheduled
+                                experience. Please contact us at +971 55 974 4777 or
+                                support@certifiedadventuretourism.com to discuss any changes you’d like to make to your
+                                reservation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <span>Do you offer insurance coverage for my adventure?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>We prioritize your safety and enjoyment during your experience. While we don’t offer
+                                comprehensive travel insurance, we do provide coverage for specific aspects of your
+                                adventure including transportation and sightseeing activities within the itinerary.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="tour-sidebar">
+            <div class="booking-card gs-reveal">
+                <div class="booking-price">
+                    $45
+                    <span>/ Guest</span>
+                </div>
+                <div class="trust-block">
+                    <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Secure Booking</div>
+                    <div class="trust-item"><i class="fa-solid fa-rotate-left"></i> 48h Free Cancellation</div>
+                    <div class="trust-item"><i class="fa-solid fa-bolt"></i> Instant Confirmation</div>
+                </div>
+                <a href="contact.html" class="cta-primary book-btn">Reserve Now</a>
+            </div>
+
+            <div class="help-block gs-reveal">
+                <h4 style="color: #fff; margin-bottom: 20px;">Need Assistance?</h4>
+                <div class="help-contact">
+                    <a href="tel:+971559744777"><i class="fa-solid fa-phone"></i> +971 55 974 4777</a>
+                    <a href="mailto:hello@certifiedtourism.com"><i class="fa-solid fa-envelope"></i>
+                        hello@certifiedtourism.com</a>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">CERTIFIED TOURISM</div>
+                <p>Curating extraordinary travel experiences in Dubai with unmatched elegance and service.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Quick Links</h4>
+                    <a href="desert-safari.html">Desert Safari</a>
+                    <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
+                    <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                    <a href="gallery.html">Gallery</a>
+                </div>
+                <div class="link-group">
+                    <h4>Contact Us</h4>
+                    <a href="tel:+97143795773"><i class="fa-solid fa-phone"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 4379 5773</a>
+                    <a href="https://wa.me/971559744777"><i class="fa-brands fa-whatsapp"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 55 974 4777</a>
+                    <a href="mailto:hello@certifiedtourism.com"><i class="fa-solid fa-envelope"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>hello@certifiedtourism.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Certified Tourism. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

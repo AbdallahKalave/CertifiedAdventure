@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Gallery | Certified Tourism</title>
+    <meta name="description" content="A visual journey into our luxury travel experiences in Dubai.">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: transparent;
+            color: #fff;
+        }
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .gallery-container {
+            column-count: 3;
+            column-gap: 20px;
+            padding: 80px 5%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 96%;
+            max-width: 1400px;
+            margin: 0 auto 100px;
+            box-shadow: 0 30px 100px rgba(0,0,0,0.2);
+        }
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%; height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-overlay h4 {
+            font-size: 1.2rem;
+            font-family: var(--font-body);
+            font-weight: 400;
+        }
+        @media (max-width: 992px) {
+            .gallery-container {
+                column-count: 2;
+            }
+        }
+        @media (max-width: 600px) {
+            .gallery-container {
+                column-count: 1;
+            }
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: transparent;">
+
+    <!-- Static Global Background -->
+    <div class="global-bg">
+        <img src="assets/desert_background.png" alt="Dubai Desert Background">
+        <div class="global-overlay"></div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="logo">CERTIFIED TOURISM</div>
+        <div class="nav-toggle" id="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('show-menu')">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-container" id="nav-menu">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="desert-safari.html">Desert Safari</a>
+                <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
+                <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+            <a href="contact.html" class="nav-cta cta-primary">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="height: 40vh; margin-top: 60px;">
+        <div class="header-content">
+            <h1>Our Gallery</h1>
+            <p style="font-size: 1.2rem; font-weight: 300; color: #fff;">Visual stories of unforgettable experiences.</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <div class="gallery-container">
+        <div class="gallery-item gs-image">
+            <img src="https://images.unsplash.com/photo-1541434316656-784860b777a8?auto=format&fit=crop&q=80&w=800" alt="Dune Bashing">
+            <div class="gallery-overlay"><h4>Dune Bashing</h4></div>
+        </div>
+        <div class="gallery-item gs-image">
+            <img src="https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?auto=format&fit=crop&q=80&w=800" alt="Desert Camp">
+            <div class="gallery-overlay"><h4>Luxury Desert Camp</h4></div>
+        </div>
+        <div class="gallery-item gs-image">
+            <img src="https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?auto=format&fit=crop&q=80&w=800" alt="Desert Safari">
+            <div class="gallery-overlay"><h4>Private Safari</h4></div>
+        </div>
+        <div class="gallery-item gs-image">
+            <img src="https://images.unsplash.com/photo-1528256336495-2acbb547bf14?auto=format&fit=crop&q=80&w=800" alt="Falconry">
+            <div class="gallery-overlay"><h4>Traditional Falconry</h4></div>
+        </div>
+        <div class="gallery-item gs-image">
+            <img src="https://images.unsplash.com/photo-1512632578888-169bb134d1b9?auto=format&fit=crop&q=80&w=800" alt="Dubai Sunset">
+            <div class="gallery-overlay"><h4>Sunset Views</h4></div>
+        </div>
+        <div class="gallery-item gs-image">
+            <img src="https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&q=80&w=800" alt="Balloon Ride">
+            <div class="gallery-overlay"><h4>Sunrise Balloon</h4></div>
+        </div>
+        <div class="gallery-item gs-image">
+            <img src="https://images.unsplash.com/photo-1627940183181-e23a4835a6db?auto=format&fit=crop&q=80&w=800" alt="Golden Hour">
+            <div class="gallery-overlay"><h4>Dinner in the Dunes</h4></div>
+        </div>
+        <div class="gallery-item gs-image">
+            <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&q=80&w=800" alt="City Skyline">
+            <div class="gallery-overlay"><h4>Dubai Skyline</h4></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">CERTIFIED TOURISM</div>
+                <p>Curating extraordinary travel experiences in Dubai with unmatched elegance and service.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Quick Links</h4>
+                    <a href="desert-safari.html">Desert Safari</a>
+                    <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
+                    <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                    <a href="gallery.html">Gallery</a>
+                </div>
+                <div class="link-group">
+                    <h4>Contact Us</h4>
+                    <a href="tel:+97143795773"><i class="fa-solid fa-phone"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 4379 5773</a>
+                    <a href="https://wa.me/971559744777"><i class="fa-brands fa-whatsapp"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 55 974 4777</a>
+                    <a href="mailto:hello@certifiedtourism.com"><i class="fa-solid fa-envelope"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>hello@certifiedtourism.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Certified Tourism. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
