@@ -3,36 +3,36 @@ const navMenu = document.getElementById('nav-menu');
 const navToggle = document.getElementById('nav-toggle');
 
 // Navbar Scroll & Experience Sub-menu Logic
+// Navbar Scroll Logic - Simplified for Static (Always Visible) behavior
 const handleNavbarLogic = () => {
     if (!navbar) return;
     
-    // Initial check
-    if (window.scrollY > 50) navbar.classList.add('scrolled');
-
-    window.addEventListener('scroll', () => {
+    const updateNavbar = () => {
         const scrollY = window.scrollY;
         
-        // 1. Basic Navbar Scrolled State
         if (scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
 
-        // 2. Experience Page Sub-menu & Navbar Hiding logic
+        // Keep sub-menu logic if it exists (for tour pages)
         const submenu = document.querySelector('.tour-submenu-bar');
         if (submenu) {
-            // When scrolling past the hero/gallery area (approx 650px), 
-            // hide the main navbar and stick submenu to the very top (0)
             if (scrollY > 650) {
-                navbar.classList.add('nav-hidden');
                 submenu.classList.add('at-top');
             } else {
-                navbar.classList.remove('nav-hidden');
                 submenu.classList.remove('at-top');
             }
         }
-    });
+    };
+
+    // Initial state
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    }
+
+    window.addEventListener('scroll', updateNavbar);
 };
 
 handleNavbarLogic();

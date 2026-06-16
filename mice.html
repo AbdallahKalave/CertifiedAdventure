@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><link rel="icon" type="image/png" href="assets/cropped-CAT-Favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MICE - Meetings, Incentives, Conferences & Exhibitions | Certified Tourism</title>
+    <meta name="description"
+        content="Premier MICE services in Dubai and UAE. From event management to corporate hospitality, we deliver excellence for your business gatherings.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .category-header {
+            height: clamp(50vh, 60vh, 70vh);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+            padding: 0 5%;
+        }
+
+
+        .category-header .subtitle {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .category-header h1 {
+            font-size: var(--fluid-h1);
+            margin-bottom: 20px;
+            text-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            line-height: 1.1;
+        }
+
+        .mice-content-section {
+            padding: var(--fluid-100) 5%;
+            color: #fff;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--fluid-radius);
+            padding: clamp(30px, 5vw, 60px);
+            margin-bottom: var(--fluid-60);
+        }
+
+
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .history-text h2 {
+            font-size: var(--fluid-h2);
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .history-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-glass-muted);
+            margin-bottom: 25px;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #3d2e1e;
+            font-weight: 600;
+        }
+
+        @media (max-width: 992px) {
+            .history-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: transparent;">
+
+    <!-- Static Global Background -->
+    <div class="global-bg">
+        <img src="assets/desert_background.png" alt="Dubai Desert Background">
+        <div class="global-overlay"></div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="logo"><img src="assets/CAT.svg" alt="Certified Tourism" style="height: 40px;"></div>
+        <div class="nav-toggle" id="nav-toggle"
+            onclick="document.getElementById('nav-menu').classList.toggle('show-menu')">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="nav-container" id="nav-menu">
+                                    <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="desert-safari.html">Desert Safari</a>
+                <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
+                <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                <a href="mice.html">MICE</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+            <a href="contact.html" class="nav-cta cta-primary">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Category Header -->
+    <header class="category-header">
+        <span class="subtitle">Business Excellence</span>
+        <h1>MICE</h1>
+        <p style="font-size: var(--fluid-p); font-weight: 300; max-width: 850px; margin: 0 auto; opacity: 0.9; line-height: 1.6;">
+            Meetings · Incentives · Conferences · Exhibitions
+        </p>
+    </header>
+
+    <!-- Main Content -->
+    <section class="mice-content-section">
+        
+
+        <!-- Company Profile Section -->
+        <div class="history-grid">
+            <div class="history-text gs-reveal">
+                <h2>Our Heritage</h2>
+                <p>1001 Events FZ LLC was established in the year 2004 as a Destination Management Services Company in the Dubai Media City with primary focus on the MICE sector.</p>
+                <p>The Leisure Division was commenced in 2005. Following our success in Dubai, the Oman branch was established in 2007. Celebrating its 10th year, the Company established its 4th office in Abu Dhabi, the capital city of UAE.</p>
+            </div>
+            
+            <div class="info-card gs-reveal" style="margin-bottom: 0;">
+                <h3 style="margin-bottom: 25px;">A Decade of Success</h3>
+                <p style="margin-bottom: 30px;">The Company has over 40 staff belonging to 11 different nationalities with an average experience of 15 years in the hospitality and DMC industry within the destination.</p>
+                
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Events Handled</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">400+</span>
+                        <span class="stat-label">Global Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Countries Served</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo"><img src="assets/CAT.svg" alt="Certified Tourism" style="height: 40px;"></div>
+                <p>Curating extraordinary travel experiences in Dubai with unmatched elegance and service.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="desert-safari.html">Desert Safari</a>
+                    <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
+                    <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                    <a href="mice.html">MICE</a>
+                    <a href="gallery.html">Gallery</a>
+                </div>
+                <div class="link-group">
+                    <h4>Contact Us</h4>
+                    <a href="tel:+97143795773"><i class="fa-solid fa-phone"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 4379 5773</a>
+                    <a href="https://wa.me/971559744777"><i class="fa-brands fa-whatsapp"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 50 242 4760</a>
+                    <a href="mailto:info@certifiedtourism.com"><i class="fa-solid fa-envelope"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>info@certifiedtourism.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Certified Tourism. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

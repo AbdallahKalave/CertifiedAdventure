@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+<head><link rel="icon" type="image/png" href="assets/cropped-CAT-Favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imperial Desert Journey | Certified Tourism</title>
-    <meta name="description" content="Experience the ultimate luxury desert journey with our Imperial Package.">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Imperial Desert Journey: Ultimate Package | Certified Tourism</title>
+    <meta name="description"
+        content="Experience the ultimate luxury with our Imperial Desert Journey. The Gold Standard of desert safaris featuring thrilling dune bashing, BBQ dinner, and premium entertainment.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-styles.css">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
-<body style="background-color: transparent;">
 
-    <!-- Static Global Background -->
+<body style="background-color: transparent;">
+    <!-- Global Background -->
     <div class="global-bg">
-        <img src="assets/desert_background.png" alt="Dubai Desert Background">
+        <img src="assets/desert_background_new.jpg" alt="Dubai Desert Background">
         <div class="global-overlay"></div>
     </div>
 
-    <!-- Sticky Navigation -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo">CERTIFIED TOURISM</div>
-        <div class="nav-toggle" id="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('show-menu')">
+        <div class="logo"><img src="assets/CAT.svg" alt="Certified Tourism" style="height: 40px;"></div>
+        <div class="nav-toggle" id="nav-toggle"
+            onclick="document.getElementById('nav-menu').classList.toggle('show-menu')">
             <i class="fa-solid fa-bars"></i>
         </div>
         <div class="nav-container" id="nav-menu">
@@ -30,6 +38,7 @@
                 <a href="desert-safari.html">Desert Safari</a>
                 <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
                 <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                <a href="mice.html">MICE</a>
                 <a href="gallery.html">Gallery</a>
             </div>
             <a href="contact.html" class="nav-cta cta-primary">Book Now</a>
@@ -39,158 +48,522 @@
     <!-- Tour Header -->
     <header class="tour-header-section">
         <div class="tour-title-wrap">
-            <span class="subtitle">Ultimate Package</span>
-            <h1>Imperial Desert Journey: The Gold Standard</h1>
+            <span class="subtitle gs-reveal">Ultimate Package</span>
+            <h1 class="gs-reveal">Imperial Desert Journey: The Gold Standard</h1>
+
         </div>
     </header>
 
-    <!-- Gallery -->
-    <div class="tour-gallery">
+    <!-- Image Gallery -->
+    <div class="tour-gallery gs-reveal">
         <div class="gallery-item item-main">
-            <img src="https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&q=80&w=1200" alt="Imperial Desert">
+            <img src="assets/Fleet.jpg" alt="Imperial Desert Fleet" style="object-position: left center;">
         </div>
         <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?auto=format&fit=crop&q=80&w=600" alt="Dune Bashing">
+            <img src="assets/DuneBash-1.jpg" alt="Dune Bashing Adventure">
         </div>
         <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1542640244-7e672d6cb466?auto=format&fit=crop&q=80&w=600" alt="Sunset">
+            <img src="assets/golden-hour-5.jpg" alt="Desert Fun">
         </div>
         <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&q=80&w=600" alt="Dinner">
+            <img src="assets/DuneBash-2.jpg" alt="Red Dunes Arabian Journey">
         </div>
         <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1627940183181-e23a4835a6db?auto=format&fit=crop&q=80&w=600" alt="Camp">
+            <img src="assets/Belly-Dance-Certified-Adventure-Tourism-13.jpg" alt="Belly Dance Performance">
         </div>
     </div>
 
     <!-- Main Content -->
     <main class="tour-main-content">
         <div class="tour-details-column">
-            
-            <div class="content-card gs-reveal">
-                <h2><i class="fa-solid fa-circle-info"></i> Experience Overview</h2>
+
+            <!-- Experience Overview -->
+            <section id="details" class="content-card gs-reveal">
+                <h2><i class="fa-solid fa-circle-info" style="color: #3d2b1a;"></i> Experience Overview</h2>
                 <p class="detail-text">
-                    The Imperial Desert Journey is our most prestigious experience, designed for those who seek the peak of luxury and adventure. This journey takes you deep into the pristine dunes of the Dubai Desert Conservation Reserve in high-end 4x4 vehicles. 
-                    <br><br>
-                    Every detail of this journey has been curated to provide a royal experience, from the thrilling dune bashing session to a private gourmet dinner served under the vast Arabian sky. This is not just a tour; it's a legacy experience that captures the true spirit of Arabian hospitality.
+                    The absolute packed tour with thrills, adrenaline, entertainment and barbecue dinner. Get Set and go
+                    straight into the highway as we head towards the amazing red dunes of Arabia. Start the tour with
+                    some great driving skills by our safari marshals, who cut through the steep dunes to make it a
+                    fun-filled drive to enjoy.
                 </p>
-            </div>
+                <p class="detail-text">
+                    Stop for pictures and enjoy the sunset before heading to our camp, where you will be welcomed with
+                    Arabic coffee and dates. Enjoy a camel ride, try the hubbly bubbly (shisha) and ask our henna
+                    designer to help you with a tattoo.
+                </p>
+                <p class="detail-text">
+                    Enjoy freshly made Falafel, Veg Sambousek, Chicken Sambousek, Veg Springroll and Chicken Springroll
+                    as you settle in for an unforgettable evening beneath the desert stars. The night begins with a
+                    mesmerizing Sufi Tanoura dance performance, setting the tone for an authentic cultural experience.
+                    Then, be amazed by the fiery belly dance show, blending traditional movement with thrilling flame
+                    effects. Next, indulge in a widespread buffet, featuring a delicious variety of dishes — including
+                    freshly grilled barbecue, prepared for the ultimate desert dining experience. As the evening draws
+                    to a close, be captivated by a stunning fire show that lights up the night sky. We return with
+                    breathtaking memories and moments to cherish for a lifetime — all part of the perfect tour, brought
+                    to you by Certified Adventure.
+                </p>
+            </section>
 
-            <div class="content-card gs-reveal">
-                <h2><i class="fa-solid fa-bolt"></i> Activities</h2>
-                <div class="activity-list">
-                    <div class="activity-item"><i class="fa-solid fa-check"></i> Luxury Dune Bashing (45 Min)</div>
-                    <div class="activity-item"><i class="fa-solid fa-check"></i> Sunset Photography Session</div>
-                    <div class="activity-item"><i class="fa-solid fa-check"></i> Professional Sandboarding</div>
-                    <div class="activity-item"><i class="fa-solid fa-check"></i> Private Camel Trekking</div>
-                    <div class="activity-item"><i class="fa-solid fa-check"></i> Falconry Show</div>
-                    <div class="activity-item"><i class="fa-solid fa-check"></i> Henna Painting</div>
+            <!-- Activities Section -->
+            <section class="content-card gs-reveal">
+                <h3 style="font-size: 1.4rem; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;"><i
+                        class="fa-solid fa-bolt" style="color: #3d2b1a;"></i> Activities</h3>
+                <div class="activity-grid">
+                    <div class="activity-item"><i class="fa-solid fa-check-circle"></i> Dune bashing</div>
+                    <div class="activity-item"><i class="fa-solid fa-check-circle"></i> Thrilling Sandboarding</div>
+                    <div class="activity-item"><i class="fa-solid fa-check-circle"></i> Falcon Photography</div>
+                    <div class="activity-item"><i class="fa-solid fa-check-circle"></i> Camel Ride</div>
+                    <div class="activity-item"><i class="fa-solid fa-check-circle"></i> ATV / Dune Buggy Ride</div>
                 </div>
-            </div>
+            </section>
 
-            <div class="content-card gs-reveal collapsible-section">
+            <!-- Inclusions & Exclusions (Collapsible) -->
+            <section class="content-card gs-reveal collapsible-section">
                 <div class="section-toggle-header">
-                    <h2><i class="fa-solid fa-list-check"></i> Inclusions & Exclusions</h2>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-list-check" style="color: #3d2b1a;"></i> Inclusions & Exclusions</h3>
                     <i class="fa-solid fa-chevron-down toggle-icon"></i>
                 </div>
                 <div class="section-body">
                     <div class="section-body-inner">
-                <div class="check-list">
-                    <div class="check-column">
-                        <h4>Price Includes</h4>
-                        <div class="check-item in"><i class="fa-solid fa-check"></i> Royal VIP Pick-up and Drop-off</div>
-                        <div class="check-item in"><i class="fa-solid fa-check"></i> Private Luxury 4x4 Vehicle</div>
-                        <div class="check-item in"><i class="fa-solid fa-check"></i> 5-Course Gourmet BBQ Dinner</div>
-                        <div class="check-item in"><i class="fa-solid fa-check"></i> Unlimited Premium Beverages</div>
-                        <div class="check-item in"><i class="fa-solid fa-check"></i> All Entertainment Shows</div>
-                    </div>
-                    <div class="check-column">
-                        <h4>Price Excludes</h4>
-                        <div class="check-item ex"><i class="fa-solid fa-xmark"></i> Alcoholic Beverages</div>
-                        <div class="check-item ex"><i class="fa-solid fa-xmark"></i> Personal Gratuities</div>
-                        <div class="check-item ex"><i class="fa-solid fa-xmark"></i> Souvenir Purchases</div>
+                        <div class="check-list">
+                            <div class="check-column">
+                                <h4 style="margin-bottom: 20px; font-size: 1.2rem; color: #ffffff;">Price Includes</h4>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Pickup and drop-off
+                                    from your hotel or selected location</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> 4WD air-conditioned
+                                    vehicle</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Dune bashing (30
+                                    Min), Sandboard & Camel Ride</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Luqaimat, Arabic
+                                    coffee, Tea and Dates</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Henna tattoo</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Shisha smoking</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Sunset photo stop
+                                </div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Unlimited water and
+                                    soft drinks</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Starters - Falafel,
+                                    Veg-sambousek, Chkn-sambousek, Veg-Springroll and Chkn-Springroll</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> 2 cans of Beer or 2
+                                    glass of Wine per Adult</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Souvenir sand bottle
+                                </div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Arabic dinner with
+                                    soup, salads, breads, main spread and Six Course barbeque</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> VIP Table Service
+                                </div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Arabian
+                                    entertainment (Sufi Dance, Belly Dance, Fire Belly, Tanura Show, Fire Show, Tanura
+                                    Fire)</div>
+                            </div>
+                            <div class="check-column">
+                                <h4 style="margin-bottom: 20px; font-size: 1.2rem; color: #ffffff;">Price Excludes</h4>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Quad bike / Dune
+                                    buggy activities (Optional)</div>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Tipping (Not
+                                    mandatory)</div>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Any extra services
+                                    or expenses not mentioned above.</div>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Falcon Photography
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                    </div>
-                </div>
-            </div>
+            </section>
 
-            <div class="content-card gs-reveal collapsible-section">
+            <!-- Good to Know Section (Collapsible) -->
+            <section class="content-card gs-reveal collapsible-section">
                 <div class="section-toggle-header">
-                    <h2><i class="fa-solid fa-calendar-day"></i> Itinerary</h2>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-lightbulb" style="color: #3d2b1a;"></i> Good to Know</h3>
                     <i class="fa-solid fa-chevron-down toggle-icon"></i>
                 </div>
                 <div class="section-body">
                     <div class="section-body-inner">
-                <div class="itinerary-static-list">
-                    <div class="itinerary-static-item">
-                        <span class="itinerary-static-title">Pickup & Departure</span>
-                        <p class="itinerary-static-desc">You will be picked up from your location in a private luxury 4x4 vehicle by our professional safari marshal.</p>
-                    </div>
-                    <div class="itinerary-static-item">
-                        <span class="itinerary-static-title">The Dune Adventure</span>
-                        <p class="itinerary-static-desc">Experience a thrilling 45-minute dune bashing session across the red sands of the Dubai desert.</p>
-                    </div>
-                    <div class="itinerary-static-item">
-                        <span class="itinerary-static-title">Sunset & Activities</span>
-                        <p class="itinerary-static-desc">Stop for sunset photos, enjoy sandboarding, and take a short camel ride before heading to the camp.</p>
-                    </div>
-                    <div class="itinerary-static-item">
-                        <span class="itinerary-static-title">Gourmet Dining</span>
-                        <p class="itinerary-static-desc">Arrival at the exclusive camp followed by a VIP dinner and traditional live entertainment.</p>
-                    </div>
-                    <div class="itinerary-static-item">
-                        <span class="itinerary-static-title">Return</span>
-                        <p class="itinerary-static-desc">Safe drop-off back to your hotel or residence.</p>
+                        <ul class="detail-list" style="list-style: none; padding: 0; margin: 0 0 25px 0;">
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> The 4-wheel drive
+                                vehicles are equipped with necessary safety features
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> The tour duration
+                                includes pickup and drop-off
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Quad biking is a
+                                self-driving activity taken at your own risk and the activity provider’s insurance does
+                                not cover
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Any accidents or
+                                damages from the activity will be the sole responsibility of the rider and passenger
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> International travel
+                                insurance is recommended as self-driving activities are prone to risk, possibly leading
+                                to serious injury
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Avoid eating 2-3 hours
+                                before the safari to prevent sickness during dune bashing
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Pickup timing may
+                                change due to summer heat; advance notification will be sent
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> During Ramadan, only
+                                Tanoura dance and fire show are available
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Stargazing & Fire show
+                                is available only in the evening slots
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Wear long clothes and
+                                jackets during winter
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Individuals with back
+                                problems, disabilities, or those aged 60 and above are advised against riding camels
+                            </li>
+                        </ul>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 25px;">
+                            <div>
+                                <h4
+                                    style="color: #F44336; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                                    <i class="fa-solid fa-ban" style="color: #3d2b1a;"></i> Not suitable for
+                                </h4>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Pregnant women</div>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> People with back
+                                    problems</div>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> People with heart
+                                    problems</div>
+                                <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Children under 3
+                                    years</div>
+                            </div>
+                            <div>
+                                <h4
+                                    style="color: #4CAF50; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                                    <i class="fa-solid fa-bag-shopping" style="color: #3d2b1a;"></i> What to bring
+                                </h4>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Sunscreen</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Sunglasses</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Sun hat</div>
+                                <div class="check-item in"><i class="fa-solid fa-circle-check"></i> Comfortable shoes
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 25px;">
+                            <h4
+                                style="color: #F44336; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-solid fa-triangle-exclamation" style="color: #3d2b1a;"></i> Not allowed
+                            </h4>
+                            <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Luggage or large bags
+                            </div>
+                            <div class="check-item ex"><i class="fa-solid fa-circle-xmark"></i> Wheelchair users
+                                (Allowed on private bookings only)</div>
+                        </div>
                     </div>
                 </div>
+            </section>
+
+            <!-- Itinerary Section (Collapsible) -->
+            <section id="itinerary" class="content-card gs-reveal collapsible-section">
+                <div class="section-toggle-header">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-route" style="color: #3d2b1a;"></i> Itinerary</h3>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="section-body">
+                    <div class="section-body-inner">
+                        <p class="detail-text" style="margin-bottom: 20px;">
+                            Your tour begins with an unforgettable roller coaster drive in the desert skimming over the
+                            magnificent Sand Dunes. Amidst all the fun and action, we stop for pictures. After which we
+                            proceed towards our camp. A traditional welcome awaits our guests with Arabic coffee, and
+                            tea and dates while the charcoal fires and the traditional oven is lit in preparation for
+                            our evening dinner. Relax in our cozy outdoor lounge areas, furnished with plush sofas and
+                            cushions. Enjoy the tranquility of the desert while sipping on refreshing beverages. Get a
+                            henna tattoo or experience an unforgettable camel ride while we wait for the highlight of
+                            the evening which includes a Tannoura dance show , a Fire show and an exotic belly
+                            performance to the rhythmic beat of Arabia. Our evening ends with a delicious four course
+                            barbeque meal with a variety of meats and salads served beneath the starlit skies. After
+                            dinner we drive back to the back to the city.
+                        </p>
+                        <p class="detail-text"
+                            style="font-style: italic; color: #3d2b1a; font-weight: 600; padding: 15px; background: rgba(255,255,255,0.03); border-radius: 12px; border-left: 4px solid #3d2b1a;">
+                            Optional :- ATV / Quad bikes / Dune buggy at extra cost payable on spot.
+                        </p>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Departure and Return (Collapsible) -->
+            <section class="content-card gs-reveal collapsible-section">
+                <div class="section-toggle-header">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-location-arrow" style="color: #3d2b1a;"></i> Departure and Return</h3>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="section-body">
+                    <div class="section-body-inner">
+                        <p class="detail-text" style="margin-bottom: 20px;">
+                            <strong style="color: #fff;">Start:</strong> Multiple pickup locations offered.
+                        </p>
+
+                        <h4 style="color: #3d2b1a; margin-bottom: 15px;">Pickup details</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 25px 0;">
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-check"
+                                    style="color: #4CAF50; margin-top: 5px; flex-shrink: 0;"></i> Kindly reconfirm pick
+                                up time 24hrs Prior the date of excursion
+                            </li>
+                        </ul>
+
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+                            <div
+                                style="background: rgba(255,255,255,0.04); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.08);">
+                                <h5
+                                    style="color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                                    <i class="fa-solid fa-hotel" style="color: #3d2b1a;"></i> Hotel pickup offered
+                                </h5>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                                    During checkout you will be able to select from the list of included hotels.
+                                </p>
+                            </div>
+                            <div
+                                style="background: rgba(255,255,255,0.04); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.08);">
+                                <h5
+                                    style="color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                                    <i class="fa-solid fa-plane" style="color: #3d2b1a;"></i> Airport pickup offered
+                                </h5>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                                    During checkout you will be able to select from the list of included airports.<br>
+                                    <strong style="color: rgba(255,255,255,0.9);">Dubai Airport, Dubai United Arab
+                                        Emirates</strong>
+                                </p>
+                            </div>
+                            <div
+                                style="background: rgba(255,255,255,0.04); border-radius: 16px; padding: 20px; border: 1px solid rgba(255,255,255,0.08);">
+                                <h5
+                                    style="color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                                    <i class="fa-solid fa-ship" style="color: #3d2b1a;"></i> Port pickup offered
+                                </h5>
+                                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                                    During checkout you will be able to select from the list of included ports.<br>
+                                    <strong style="color: rgba(255,255,255,0.9);">Cruise Terminal 2, 77CH+QXG – Port
+                                        Rashid – Dubai – United Arab Emirates</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="detail-text" style="margin-top: 20px;">
+                            <strong style="color: #fff;">End:</strong> This activity ends back at the meeting point.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Accessibility (Collapsible) -->
+            <section class="content-card gs-reveal collapsible-section">
+                <div class="section-toggle-header">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-wheelchair-move" style="color: #3d2b1a;"></i> Accessibility</h3>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="section-body">
+                    <div class="section-body-inner">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-check"
+                                    style="color: #4CAF50; margin-top: 5px; flex-shrink: 0;"></i> Infant car seats are
+                                available upon request
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-check"
+                                    style="color: #4CAF50; margin-top: 5px; flex-shrink: 0;"></i> Wheelchair are
+                                available upon request (Allowed on private bookings only)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Information (Collapsible) -->
+            <section class="content-card gs-reveal collapsible-section">
+                <div class="section-toggle-header">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0; display: flex; align-items: center; gap: 15px;"><i
+                            class="fa-solid fa-clipboard-list" style="color: #3d2b1a;"></i> Additional information</h3>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                </div>
+                <div class="section-body">
+                    <div class="section-body-inner">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Confirmation will be
+                                received at time of booking
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Not recommended for
+                                travellers with back problems
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> No heart problems or
+                                other serious medical conditions
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Not recommended for
+                                pregnant travellers
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> Travelers should have
+                                a moderate physical fitness level
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> This experience
+                                requires good weather. If it’s cancelled due to poor weather, you’ll be offered a
+                                different date or a full refund
+                            </li>
+                            <li
+                                style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;">
+                                <i class="fa-solid fa-circle-info"
+                                    style="color: #3d2b1a; margin-top: 5px; flex-shrink: 0;"></i> This tour/activity
+                                will have a maximum of 6 travellers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="content-card gs-reveal">
+                <h3 style="font-size: 1.8rem; margin-bottom: 25px; display: flex; align-items: center; gap: 15px;"><i
+                        class="fa-solid fa-circle-question" style="color: #3d2b1a;"></i> Frequently Asked Questions</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <span>Can I get the refund?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>We understand that plans change. You can cancel your reservation up to 48 hours before
+                                your experience for a full refund. Cancellations made within 24 hours of your experience
+                                will be subject to a 50% cancellation fee.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <span>Can I change the travel date?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>Our booking policy allows for modifications up to 48 hours before your scheduled
+                                experience. Please contact us at +971 50 242 4760 or
+                                support@certifiedadventuretourism.com to discuss any changes you’d like to make to your
+                                reservation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <span>Do you offer insurance coverage for my adventure?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>We prioritize your safety and enjoyment during your experience. While we don’t offer
+                                comprehensive travel insurance, we do provide coverage for specific aspects of your
+                                adventure:</p>
+                            <ul
+                                style="margin: 10px 0; padding-left: 20px; color: rgba(255,255,255,0.7); line-height: 1.8;">
+                                <li><strong style="color: rgba(255,255,255,0.9);">Transportation and
+                                        pick-up/drop-off:</strong> Your transportation to and from the activity is
+                                    covered in case of unforeseen circumstances.</li>
+                                <li><strong style="color: rgba(255,255,255,0.9);">Dune bashing:</strong> Coverage is
+                                    included for any incidents that might occur during the dune bashing portion of your
+                                    experience.</li>
+                                <li><strong style="color: rgba(255,255,255,0.9);">On-site camp:</strong> While you’re at
+                                    the designated camp for your chosen activity, you’re covered for any insured events.
+                                </li>
+                            </ul>
+                            <p>It’s important to note that this coverage is limited to the mentioned scenarios. For any
+                                additional protection, we recommend considering personal travel insurance.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </div>
 
+        <!-- Sidebar -->
         <aside class="tour-sidebar">
-            <div class="booking-card">
-                <div class="booking-price">$695<span>/ Guest</span></div>
-                <div class="booking-form">
-                    <div class="form-field">
-                        <label>Select Date</label>
-                        <input type="date">
-                    </div>
-                    <div class="form-field">
-                        <label>Guests</label>
-                        <select>
-                            <option>1 Adult</option>
-                            <option>2 Adults</option>
-                            <option>3 Adults</option>
-                            <option>4 Adults</option>
-                        </select>
-                    </div>
+            <div class="booking-card gs-reveal">
+                <div class="booking-price">
+                    $695
+                    <span>/ Guest</span>
                 </div>
-                <a href="contact.html" class="cta-primary book-btn">Reserve Experience</a>
+                <div class="trust-block">
+                    <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Secure Booking</div>
+                    <div class="trust-item"><i class="fa-solid fa-rotate-left"></i> 48h Free Cancellation</div>
+                    <div class="trust-item"><i class="fa-solid fa-bolt"></i> Instant Confirmation</div>
+                </div>
+                <a href="contact.html" class="cta-primary book-btn">Reserve Now</a>
             </div>
 
-            <div class="trust-block">
-                <div class="trust-item"><i class="fa-solid fa-shield-check"></i> Best Luxury Guarantee</div>
-                <div class="trust-item"><i class="fa-solid fa-user-tie"></i> Professional Marshals</div>
-                <div class="trust-item"><i class="fa-solid fa-clock"></i> 24-hour Free Cancellation</div>
-            </div>
-
-            <div class="help-block">
+            <div class="help-block gs-reveal">
                 <h4>Need Assistance?</h4>
                 <div class="help-contact">
-                    <a href="tel:+971559744777"><i class="fa-solid fa-phone"></i> +971 55 974 4777</a>
-                    <a href="mailto:hello@certifiedtourism.com"><i class="fa-solid fa-envelope"></i> hello@certifiedtourism.com</a>
+                    <a href="tel:+971559744777"><i class="fa-solid fa-phone"></i> +971 50 242 4760</a>
+                    <a href="mailto:info@certifiedtourism.com"><i class="fa-solid fa-envelope"></i>
+                        info@certifiedtourism.com</a>
                 </div>
             </div>
         </aside>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <div class="logo">CERTIFIED TOURISM</div>
+                <div class="logo"><img src="assets/CAT.svg" alt="Certified Tourism" style="height: 40px;"></div>
                 <p>Curating extraordinary travel experiences in Dubai with unmatched elegance and service.</p>
             </div>
             <div class="footer-links">
@@ -203,9 +576,12 @@
                 </div>
                 <div class="link-group">
                     <h4>Contact Us</h4>
-                    <a href="tel:+97143795773"><i class="fa-solid fa-phone"></i> +971 4379 5773</a>
-                    <a href="https://wa.me/971559744777"><i class="fa-brands fa-whatsapp"></i> +971 55 974 4777</a>
-                    <a href="mailto:hello@certifiedtourism.com"><i class="fa-solid fa-envelope"></i> hello@certifiedtourism.com</a>
+                    <a href="tel:+97143795773"><i class="fa-solid fa-phone"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 4379 5773</a>
+                    <a href="https://wa.me/971559744777"><i class="fa-brands fa-whatsapp"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 50 242 4760</a>
+                    <a href="mailto:info@certifiedtourism.com"><i class="fa-solid fa-envelope"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>info@certifiedtourism.com</a>
                 </div>
             </div>
         </div>
@@ -219,9 +595,7 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
-
 </body>
+
 </html>

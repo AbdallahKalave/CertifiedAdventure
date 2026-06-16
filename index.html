@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><link rel="icon" type="image/png" href="assets/cropped-CAT-Favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certified Tourism | Dubai Luxury Experiences</title>
@@ -20,23 +20,26 @@
 
     <!-- Static Global Background -->
     <div class="global-bg">
-        <img src="assets/desert_background.png" alt="Dubai Desert Background">
+        <video autoplay muted loop playsinline id="hero-video">
+            <source src="assets/HeroVid.mp4" type="video/mp4">
+        </video>
         <div class="global-overlay"></div>
     </div>
 
     <!-- Sticky Navigation -->
     <nav class="navbar">
-        <div class="logo">CERTIFIED TOURISM</div>
+        <div class="logo"><img src="assets/CAT.svg" alt="Certified Tourism" style="height: 40px;"></div>
         <div class="nav-toggle" id="nav-toggle"
             onclick="document.getElementById('nav-menu').classList.toggle('show-menu')">
             <i class="fa-solid fa-bars"></i>
         </div>
         <div class="nav-container" id="nav-menu">
-            <div class="nav-links">
+                                    <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="desert-safari.html">Desert Safari</a>
                 <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
                 <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                <a href="mice.html">MICE</a>
                 <a href="gallery.html">Gallery</a>
             </div>
             <a href="contact.html" class="nav-cta cta-primary">Book Now</a>
@@ -49,18 +52,17 @@
             <h1 class="hero-title">Experience Dubai<br>Like Never Before</h1>
             <div class="hero-actions">
                 <a href="contact.html" class="cta-primary">Book Your Safari</a>
-                <a href="packages.html" class="cta-secondary">Explore Experiences</a>
+                <a href="desert-safari.html" class="cta-secondary">Explore Experiences</a>
             </div>
         </div>
     </section>
 
     <!-- About Us Section -->
     <section class="about-section section-padding" id="about">
-        <div class="section-heading text-center" style="margin-bottom: 60px;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Our Legacy of Excellence</h2>
+        <div class="section-heading text-center">
+            <h2>Our Legacy of Excellence</h2>
         </div>
-        <div class="about-container gs-reveal"
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
+        <div class="about-container gs-reveal">
 
             <!-- Column 1 -->
             <div style="display: flex; flex-direction: column; align-items: center;">
@@ -156,21 +158,18 @@
     <section class="packages-section section-padding" id="tours-packages">
 
         <!-- Bedouin Experience -->
-        <div id="bedouin-experience" style="margin-bottom: 80px;">
-            <div class="section-heading"
-                style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
-                <h2 style="font-size: 1.8rem; margin: 0;">Bedouin Experience</h2>
-                <a href="packages.html" class="cta-primary"
-                    style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; font-size: 1rem;">View
-                    All Tours <i class="fa-solid fa-arrow-right"></i></a>
+        <div id="bedouin-experience" style="margin-bottom: var(--fluid-80);">
+            <div class="section-heading" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+                <h2 style="margin: 0;">Bedouin Experience</h2>
+                <a href="packages.html" class="cta-primary">View All Tours <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
+            <div class="experience-grid">
 
                 <!-- Card 1 -->
                 <div class="package-card" style="display: flex; flex-direction: column; cursor: pointer;"
                     onclick="window.location.href='fossil-rock-oasis.html'">
                     <div class="card-img-wrapper" style="position: relative; height: 220px;">
-                        <img src="https://images.unsplash.com/photo-1542640244-7e672d6cb466?auto=format&fit=crop&q=80&w=600"
+                        <img src="assets/Fossil-Rock-Certified-Adventure-04.jpg"
                             alt="Fossil Rock Oasis" style="width: 100%; height: 100%; object-fit: cover;">
                         <span
                             style="position: absolute; top: 15px; right: 15px; background: #475899; color: #fff; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">Evening</span>
@@ -190,7 +189,7 @@
                 <div class="package-card" style="display: flex; flex-direction: column; cursor: pointer;"
                     onclick="window.location.href='ultimate-private-desert-escape.html'">
                     <div class="card-img-wrapper" style="position: relative; height: 220px;">
-                        <img src="https://images.unsplash.com/photo-1627940183181-e23a4835a6db?auto=format&fit=crop&q=80&w=600"
+                        <img src="assets/night-rider-2.jpg"
                             alt="Ultimate Private Desert Escape" style="width: 100%; height: 100%; object-fit: cover;">
                         <span
                             style="position: absolute; top: 15px; right: 15px; background: #475899; color: #fff; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">Evening</span>
@@ -210,7 +209,7 @@
                 <div class="package-card" style="display: flex; flex-direction: column; cursor: pointer;"
                     onclick="window.location.href='grand-desert-adventure.html'">
                     <div class="card-img-wrapper" style="position: relative; height: 220px;">
-                        <img src="https://images.unsplash.com/photo-1541434316656-784860b777a8?auto=format&fit=crop&q=80&w=600"
+                        <img src="assets/Dubai-Sunrise-Desert-Safari-Certified-Adventure-Tourism-35.jpg"
                             alt="Grand Desert Adventure" style="width: 100%; height: 100%; object-fit: cover;">
                         <span
                             style="position: absolute; top: 15px; right: 15px; background: #475899; color: #fff; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">Evening</span>
@@ -230,7 +229,7 @@
                 <div class="package-card" style="display: flex; flex-direction: column; cursor: pointer;"
                     onclick="window.location.href='red-dune-adventure.html'">
                     <div class="card-img-wrapper" style="position: relative; height: 220px;">
-                        <img src="https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?auto=format&fit=crop&q=80&w=600"
+                        <img src="assets/Desert-Camp-Standard-1-Certified-Adventure-Tourism.jpg"
                             alt="Red Dune Adventure" style="width: 100%; height: 100%; object-fit: cover;">
                         <span
                             style="position: absolute; top: 15px; right: 15px; background: #475899; color: #fff; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">Evening</span>
@@ -251,20 +250,17 @@
 
         <!-- Canopy Village -->
         <div id="canopy-village">
-            <div class="section-heading"
-                style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
-                <h2 style="font-size: 1.8rem; margin: 0;">The Canopy Village</h2>
-                <a href="packages.html" class="cta-primary"
-                    style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; font-size: 1rem;">View
-                    All Tours <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="section-heading" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+                <h2 style="margin: 0;">The Canopy Village</h2>
+                <a href="packages.html" class="cta-primary">View All Tours <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
+            <div class="experience-grid">
 
                 <!-- Card 1 -->
                 <div class="package-card" style="display: flex; flex-direction: column; cursor: pointer;"
                     onclick="window.location.href='opulent-desert-retreat.html'">
                     <div class="card-img-wrapper" style="position: relative; height: 220px;">
-                        <img src="https://certifiedadventure.com/wp-content/uploads/2024/08/Dubai-Fire-Show-Certified-Adventure-Tourism-7-900x500.jpg"
+                        <img src="assets/Desert-Camp-Souvenir-Shop-Standard-1-Certified-Adventure-Tourism.jpg"
                             alt="Opulent Desert Retreat" style="width: 100%; height: 100%; object-fit: cover;">
                         <span
                             style="position: absolute; top: 15px; right: 15px; background: #475899; color: #fff; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">Evening</span>
@@ -284,7 +280,7 @@
                 <div class="package-card" style="display: flex; flex-direction: column; cursor: pointer;"
                     onclick="window.location.href='crimson-dune-indulgence.html'">
                     <div class="card-img-wrapper" style="position: relative; height: 220px;">
-                        <img src="https://images.unsplash.com/photo-1528256336495-2acbb547bf14?auto=format&fit=crop&q=80&w=600"
+                        <img src="assets/Dubai-Desert-Group-6-Certified-Adventure-Tourism.jpg"
                             alt="Crimson Dune Indulgence" style="width: 100%; height: 100%; object-fit: cover;">
                         <span
                             style="position: absolute; top: 15px; right: 15px; background: #475899; color: #fff; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">Evening</span>
@@ -304,7 +300,7 @@
                 <div class="package-card" style="display: flex; flex-direction: column; cursor: pointer;"
                     onclick="window.location.href='starlight-serenade.html'">
                     <div class="card-img-wrapper" style="position: relative; height: 220px;">
-                        <img src="https://certifiedadventure.com/wp-content/uploads/2024/08/Dubai-Fire-Show-Certified-Adventure-Tourism-5.jpg"
+                        <img src="assets/Dubai-Desert-Group-1-Certified-Adventure-Tourism.jpg"
                             alt="Starlight Serenade" style="width: 100%; height: 100%; object-fit: cover;">
                         <span
                             style="position: absolute; top: 15px; right: 15px; background: #475899; color: #fff; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">Evening</span>
@@ -324,7 +320,7 @@
                 <div class="package-card" style="display: flex; flex-direction: column; cursor: pointer;"
                     onclick="window.location.href='fossil-rock-palace.html'">
                     <div class="card-img-wrapper" style="position: relative; height: 220px;">
-                        <img src="assets/fossil-rock-4.jpg" alt="Fossil Rock Palace"
+                        <img src="assets/Fossil-Rock-Internet-700x430.jpg" alt="Fossil Rock Palace"
                             style="width: 100%; height: 100%; object-fit: cover;">
                         <span
                             style="position: absolute; top: 15px; right: 15px; background: #475899; color: #fff; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">Evening</span>
@@ -354,14 +350,14 @@
             <!-- Left Side: Overlapped Images -->
             <div style="flex: 1; position: relative; min-width: 300px; display: flex; align-items: center;">
                 <div style="position: relative; width: 100%; height: 420px;">
-                    <!-- Main Background Image (Camp) -->
-                    <img src="https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?auto=format&fit=crop&q=80&w=600"
-                        alt="Desert Camp"
+                    <!-- Main Background Image (Dinner/Camp) -->
+                    <img src="assets/adventure-dinner.jpg"
+                        alt="Luxury Desert Dinner"
                         style="width: 80%; height: 320px; object-fit: cover; box-shadow: 0 15px 40px rgba(0,0,0,0.3); position: absolute; bottom: 0; right: 0; z-index: 1;">
 
                     <!-- Floating SUV Image -->
-                    <img src="https://images.unsplash.com/photo-1541434316656-784860b777a8?auto=format&fit=crop&q=80&w=600"
-                        alt="Safari Vehicle"
+                    <img src="assets/adventure-suv.png"
+                        alt="Certified Adventure Safari SUV"
                         style="width: 55%; height: 280px; object-fit: cover; box-shadow: 0 25px 50px rgba(0,0,0,0.5); position: absolute; top: 0; left: 0; z-index: 2;">
                 </div>
             </div>
@@ -509,7 +505,7 @@
         </div>
         <div class="footer-content">
             <div class="footer-brand">
-                <div class="logo">CERTIFIED TOURISM</div>
+                <div class="logo"><img src="assets/CAT.svg" alt="Certified Tourism" style="height: 40px;"></div>
                 <p>Curating extraordinary travel experiences in Dubai with unmatched elegance and service.</p>
             </div>
             <div class="footer-links">
@@ -518,6 +514,7 @@
                     <a href="desert-safari.html">Desert Safari</a>
                     <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
                     <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                    <a href="mice.html">MICE</a>
                     <a href="gallery.html">Gallery</a>
                 </div>
                 <div class="link-group">
@@ -525,9 +522,9 @@
                     <a href="tel:+97143795773"><i class="fa-solid fa-phone"
                             style="font-size: 0.8rem; margin-right: 8px;"></i>+971 4379 5773</a>
                     <a href="https://wa.me/971559744777"><i class="fa-brands fa-whatsapp"
-                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 55 974 4777</a>
-                    <a href="mailto:hello@certifiedtourism.com"><i class="fa-solid fa-envelope"
-                            style="font-size: 0.8rem; margin-right: 8px;"></i>hello@certifiedtourism.com</a>
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 50 242 4760</a>
+                    <a href="mailto:info@certifiedtourism.com"><i class="fa-solid fa-envelope"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>info@certifiedtourism.com</a>
                 </div>
             </div>
         </div>
@@ -548,3 +545,4 @@
 </body>
 
 </html>
+

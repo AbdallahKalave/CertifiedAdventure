@@ -1,8 +1,8 @@
 /* Tour Page Specific Styles */
 
 .tour-header-section {
-    padding-top: 140px;
-    padding-bottom: 40px;
+    padding-top: clamp(100px, 15vh, 160px);
+    padding-bottom: clamp(20px, 5vh, 60px);
     color: #fff;
     text-align: left;
 }
@@ -10,24 +10,24 @@
 .tour-title-wrap {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 4%;
 }
 
 .tour-title-wrap h1 {
-    font-size: 3rem;
+    font-size: var(--fluid-h2);
     margin-bottom: 20px;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 /* Gallery Grid */
 .tour-gallery {
     max-width: 1400px;
-    margin: 0 auto 60px;
-    padding: 0 2%;
+    margin: 0 auto var(--fluid-80);
+    padding: 0 3%;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: repeat(2, 250px);
-    gap: 15px;
+    grid-template-rows: repeat(2, clamp(150px, 20vw, 300px));
+    gap: clamp(10px, 1.5vw, 20px);
 }
 
 .gallery-item {
@@ -50,16 +50,17 @@
 .item-main {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    position: relative;
 }
 
 /* Main Content Layout */
 .tour-main-content {
     max-width: 1400px;
-    margin: 0 auto 100px;
-    padding: 0 2%;
+    margin: 0 auto var(--fluid-100);
+    padding: 0 4%;
     display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 40px;
+    grid-template-columns: 1fr clamp(300px, 30%, 400px);
+    gap: clamp(20px, 4vw, 50px);
     align-items: start;
 }
 
@@ -107,8 +108,8 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 24px;
-    padding: 40px;
+    border-radius: var(--fluid-radius);
+    padding: clamp(30px, 5vw, 50px);
     color: #fff;
 }
 
@@ -135,7 +136,7 @@
 .activity-list,
 .activity-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
 }
 
@@ -153,7 +154,7 @@
 /* Inclusions/Exclusions */
 .check-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
 }
 
@@ -323,14 +324,18 @@
 }
 
 .help-block {
-    background: #624a2f;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px;
     padding: 25px;
     text-align: center;
 }
 
 .help-block h4 {
-    margin-bottom: 15px;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 .help-contact {
@@ -345,8 +350,14 @@
     justify-content: center;
     gap: 10px;
     font-size: 0.95rem;
-    opacity: 0.9;
+    color: #1a120b; /* Much darker brown */
+    text-decoration: none;
+    opacity: 1; /* Full opacity for better readability */
     transition: opacity 0.3s;
+}
+
+.help-contact a i {
+    color: #1a120b;
 }
 
 .help-contact a:hover {

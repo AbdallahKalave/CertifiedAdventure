@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+<head><link rel="icon" type="image/png" href="assets/cropped-CAT-Favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sightseeing Tours | Certified Tourism</title>
-    <meta name="description" content="Explore the iconic landmarks and cultural gems of Dubai and Abu Dhabi with our premium sightseeing tours.">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Explore the iconic landmarks and cultural gems of Dubai and Abu Dhabi with our premium sightseeing tours.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
         .category-header {
-            height: 60vh;
+            height: clamp(50vh, 60vh, 70vh);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -19,62 +23,53 @@
             color: #fff;
             position: relative;
             z-index: 2;
+            padding: 0 5%;
         }
 
         .category-header .subtitle {
             text-transform: uppercase;
             letter-spacing: 4px;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
             opacity: 0.8;
             font-weight: 500;
         }
 
         .category-header h1 {
-            font-size: 4rem;
+            font-size: var(--fluid-h1);
             margin-bottom: 20px;
-            text-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .breadcrumbs {
-            display: flex;
-            gap: 10px;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-
-        .breadcrumbs a:hover {
-            color: var(--color-accent);
-            opacity: 1;
+            text-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            line-height: 1.1;
         }
 
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(clamp(280px, 20vw, 350px), 1fr));
+            gap: clamp(20px, 3vw, 40px);
         }
 
         .tour-card {
-            background: rgba(255, 255, 255, 0.1) !important;
+            background: rgba(255, 255, 255, 0.08) !important;
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 24px;
+            border-radius: var(--fluid-radius);
             overflow: hidden;
             transition: var(--transition-smooth);
             display: flex;
             flex-direction: column;
+            height: 100%;
         }
 
         .tour-card:hover {
             transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15) !important;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            background: rgba(255, 255, 255, 0.12) !important;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
         }
 
         .tour-img-wrapper {
             position: relative;
-            height: 220px;
+            height: 250px;
             overflow: hidden;
         }
 
@@ -82,7 +77,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s ease;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .tour-card:hover .tour-img-wrapper img {
@@ -97,14 +92,16 @@
             backdrop-filter: blur(10px);
             padding: 6px 16px;
             border-radius: 50px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: #fff;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .tour-content {
-            padding: 25px;
+            padding: clamp(20px, 4vw, 30px);
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -119,11 +116,11 @@
         }
 
         .tour-header h3 {
-            font-size: 1.05rem;
+            font-size: clamp(1.1rem, 1.5vw, 1.25rem);
             line-height: 1.4;
             color: #fff;
             flex: 1;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .tour-price {
@@ -133,13 +130,13 @@
         .tour-price .amount {
             font-size: 1.5rem;
             font-weight: 800;
-            color: #3d2e1e;
+            color: #fff;
         }
 
         .tour-meta {
             margin-top: auto;
             padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -147,13 +144,13 @@
 
         .sub-category-title {
             grid-column: 1 / -1;
-            font-size: 1.8rem;
+            font-size: var(--fluid-h3);
             color: #fff;
-            margin: 60px 0 30px;
+            margin: var(--fluid-80) 0 clamp(20px, 4vw, 40px);
             padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             font-family: var(--font-heading);
             display: flex;
             align-items: center;
@@ -164,32 +161,21 @@
             content: '';
             flex: 1;
             height: 1px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .sub-category-title:first-child {
             margin-top: 0;
         }
 
-        @media (max-width: 1100px) {
-            .category-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
         @media (max-width: 768px) {
-            .category-header h1 {
-                font-size: 3rem;
-            }
-            .category-grid {
-                grid-template-columns: 1fr;
-            }
-            .sub-category-title {
-                font-size: 1.4rem;
+            .tour-img-wrapper {
+                height: 200px;
             }
         }
     </style>
 </head>
+
 <body style="background-color: transparent;">
 
     <!-- Static Global Background -->
@@ -200,16 +186,18 @@
 
     <!-- Sticky Navigation -->
     <nav class="navbar">
-        <div class="logo">CERTIFIED TOURISM</div>
-        <div class="nav-toggle" id="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('show-menu')">
+        <div class="logo"><img src="assets/CAT.svg" alt="Certified Tourism" style="height: 40px;"></div>
+        <div class="nav-toggle" id="nav-toggle"
+            onclick="document.getElementById('nav-menu').classList.toggle('show-menu')">
             <i class="fa-solid fa-bars"></i>
         </div>
         <div class="nav-container" id="nav-menu">
-            <div class="nav-links">
+                                    <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="desert-safari.html">Desert Safari</a>
                 <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
                 <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                <a href="mice.html">MICE</a>
                 <a href="gallery.html">Gallery</a>
             </div>
             <a href="contact.html" class="nav-cta cta-primary">Book Now</a>
@@ -220,15 +208,16 @@
     <header class="category-header">
         <span class="subtitle">Iconic Landmarks</span>
         <h1>Sightseeing Tours</h1>
-        <p style="font-size: 1.2rem; font-weight: 300; max-width: 700px; margin: 0 auto; opacity: 0.9;">Explore the architectural wonders and rich heritage of the UAE with our expert-led private tours.</p>
+        <p style="font-size: var(--fluid-p); font-weight: 300; max-width: 750px; margin: 0 auto; opacity: 0.9; line-height: 1.6;">Explore the
+            architectural wonders and rich heritage of the UAE with our expert-led private tours.</p>
     </header>
 
     <!-- Main Content -->
-    <section class="section-padding" style="background-color: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border-radius: 40px; width: 96%; max-width: 1400px; margin: 0 auto 100px; padding: 80px 5%;">
+    <section class="section-padding">
         <div class="category-grid">
 
             <h2 class="sub-category-title gs-reveal">Explore the City</h2>
-            
+
             <!-- Tour 1 -->
             <div class="tour-card gs-reveal">
                 <div class="tour-img-wrapper">
@@ -243,7 +232,8 @@
                         <div class="tour-price">
                             <span class="amount">$175</span>
                         </div>
-                        <a href="private-dubai-city-tour.html" class="cta-text">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="private-dubai-city-tour.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -262,7 +252,8 @@
                         <div class="tour-price">
                             <span class="amount">$325</span>
                         </div>
-                        <a href="private-abu-dhabi-tour.html" class="cta-text">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="private-abu-dhabi-tour.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -281,7 +272,8 @@
                         <div class="tour-price">
                             <span class="amount">$45</span>
                         </div>
-                        <a href="dubai-city-tour.html" class="cta-text">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="dubai-city-tour.html" class="cta-text">Book Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -293,7 +285,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <div class="logo">CERTIFIED TOURISM</div>
+                <div class="logo"><img src="assets/CAT.svg" alt="Certified Tourism" style="height: 40px;"></div>
                 <p>Curating extraordinary travel experiences in Dubai with unmatched elegance and service.</p>
             </div>
             <div class="footer-links">
@@ -302,6 +294,7 @@
                     <a href="desert-safari.html">Desert Safari</a>
                     <a href="desert-safari.html#atv-dune-buggy">ATV & Dune Buggy</a>
                     <a href="sightseeing-tours.html">Sightseeing Tours</a>
+                    <a href="mice.html">MICE</a>
                     <a href="gallery.html">Gallery</a>
                 </div>
                 <div class="link-group">
@@ -309,9 +302,9 @@
                     <a href="tel:+97143795773"><i class="fa-solid fa-phone"
                             style="font-size: 0.8rem; margin-right: 8px;"></i>+971 4379 5773</a>
                     <a href="https://wa.me/971559744777"><i class="fa-brands fa-whatsapp"
-                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 55 974 4777</a>
-                    <a href="mailto:hello@certifiedtourism.com"><i class="fa-solid fa-envelope"
-                            style="font-size: 0.8rem; margin-right: 8px;"></i>hello@certifiedtourism.com</a>
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>+971 50 242 4760</a>
+                    <a href="mailto:info@certifiedtourism.com"><i class="fa-solid fa-envelope"
+                            style="font-size: 0.8rem; margin-right: 8px;"></i>info@certifiedtourism.com</a>
                 </div>
             </div>
         </div>
@@ -330,4 +323,6 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
+
